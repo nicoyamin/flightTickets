@@ -8,7 +8,6 @@ public class FlightTicketsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FlightTicketsApplication.class, args);
-		System.out.println("Hello worlds");
 	}
 
 }
