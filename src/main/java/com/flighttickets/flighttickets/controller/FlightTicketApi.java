@@ -28,7 +28,7 @@ public interface FlightTicketApi {
     @RequestMapping(value="/flightTickets/createTicket",
     produces={"application/JSON"},
     method= RequestMethod.POST)
-    ResponseEntity createFlightTicket(@ApiParam(value="Data for new Ticket")
+    ResponseEntity<Long> createFlightTicket(@ApiParam(value="Data for new Ticket")
                                       @Valid@RequestBody(required=true) FlightTicketRequest request);
 
     @ApiOperation(value = "Retrieve flight ticket by id", nickname = "getTicketById", response = ResponseEntity.class)
@@ -44,7 +44,7 @@ public interface FlightTicketApi {
     @RequestMapping(value="/flightTickets/getTicketById",
             produces={"application/JSON"},
             method= RequestMethod.GET)
-    ResponseEntity<FlightTicket> getTicketById(@NotNull
+    ResponseEntity<Object> getTicketById(@NotNull
                                                @ApiParam(value = "Flight Ticket Id", required = true)
                                                @Valid@RequestParam(value = "flightTicketId", required = true) Long flightTicketId);
 

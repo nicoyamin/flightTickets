@@ -21,7 +21,7 @@ public class FlightTicketController implements FlightTicketApi{
     }
 
     @Override
-    public ResponseEntity createFlightTicket(FlightTicketRequest request) {
+    public ResponseEntity<Long> createFlightTicket(FlightTicketRequest request) {
 
         Long createdTicektId = flightTicketService.createNewTicket(request);
 
@@ -29,7 +29,7 @@ public class FlightTicketController implements FlightTicketApi{
     }
 
     @Override
-    public ResponseEntity getTicketById(@NotNull @Valid Long flightTicketId) {
+    public ResponseEntity<Object> getTicketById(@NotNull @Valid Long flightTicketId) {
 
         FlightTicket retrievedTicket = flightTicketService.getTicketById(flightTicketId);
 
