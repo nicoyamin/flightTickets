@@ -8,6 +8,7 @@ public class FlightTicketsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FlightTicketsApplication.class, args);
+		System.out.println("Go to http://localhost:8080/swagger-ui.html# to test API!");
 	}
 
 }
